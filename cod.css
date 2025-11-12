@@ -1,0 +1,109 @@
+/* ======= VARIÁVEIS DE TEMA ======= */
+:root {
+    --cor-fundo: #f8f9fa;
+    --cor-texto: #212529;
+    --cor-navbar: #212529;
+    --cor-card-fundo: #ffffff;
+    --cor-card-borda: #dee2e6;
+    --cor-primaria: #007bff;
+    --cor-secundaria: #ff477e;
+    --cor-destaque: #ff8c00;
+}
+
+[data-theme="dark"] {
+    --cor-fundo: #121212;
+    --cor-texto: #eeeeee;
+    --cor-navbar: #000000;
+    --cor-card-fundo: #1f1f1f;
+    --cor-card-borda: #444;
+}
+
+/*  Reset  */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    background-color: var(--cor-navbar) !important;
+    border-bottom: 4px solid var(--cor-primaria);
+}
+
+header nav a {
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--cor-destaque);
+}
+
+header nav a.active {
+    color: var(--cor-secundaria);
+}
+
+.acessibility-controls button {
+    margin-left: 5px;
+}
+
+/* ======= MAIN ======= */
+main {
+    flex: 1;
+}
+
+/* ======= CARDS ======= */
+.card {
+    background-color: var(--cor-card-fundo);
+    border: 1px solid var(--cor-card-borda);
+    border-left: 5px solid var(--cor-primaria);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ======= BOTÕES ======= */
+.btn-warning {
+    background-color: var(--cor-destaque);
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-warning:hover {
+    opacity: 0.9;
+}
+
+/* ======= FOOTER ======= */
+footer {
+    background-color: var(--cor-navbar);
+    color: white;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+    header nav a {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .acessibility-controls {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
